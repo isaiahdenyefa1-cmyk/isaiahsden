@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isaiah Den - CV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f4f4f4;
+        }
+
+        .cv-container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .cv-header {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .cv-header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .cv-header h2 {
+            font-size: 1.3em;
+            font-weight: 300;
+            margin-bottom: 20px;
+            color: #ecf0f1;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-item i {
+            color: #3498db;
+        }
+
+        .cv-body {
+            padding: 40px;
+        }
+
+        .cv-section {
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            font-size: 1.6em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3498db;
+        }
+
+        .profile-text {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .skill-category h3 {
+            color: #2c3e50;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .skill-item {
+            background: #ecf0f1;
+            padding: 8px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 5px;
+            font-size: 0.9em;
+        }
+
+        .experience-item, .education-item {
+            margin-bottom: 25px;
+            padding-left: 20px;
+            border-left: 3px solid #3498db;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .item-title {
+            font-size: 1.2em;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .item-subtitle {
+            color: #3498db;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .item-date {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            white-space: nowrap;
+        }
+
+        .item-description {
+            color: #555;
+            margin-top: 10px;
+        }
+
+        .item-description ul {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+
+        .item-description li {
+            margin-bottom: 5px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 20px 0;
+            transition: background 0.3s;
+        }
+
+        .download-btn:hover {
+            background: #2980b9;
+        }
+
+        .download-btn i {
+            margin-right: 8px;
+        }
+
+        .languages, .certifications {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .language-item, .cert-item {
+            background: #ecf0f1;
+            padding: 10px 20px;
+            border-radius: 5px;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            .cv-container {
+                box-shadow: none;
+                margin: 0;
+            }
+            .download-btn {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cv-container {
+                margin: 20px;
+            }
+            .cv-header, .cv-body {
+                padding: 20px;
+            }
+            .cv-header h1 {
+                font-size: 1.8em;
+            }
+            .item-header {
+                flex-direction: column;
+            }
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <!-- Header -->
+        <div class="cv-header">
+            <h1>Isaiah Den</h1>
+            <h2>Full Stack Developer & UI/UX Designer</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>isaiahdenyefa@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+234 805 283 9392</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Delta, Nigeria</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <span>github.com/isaiahdenyefa1-cmyk</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="cv-body">
+            <!-- Download Button -->
+            <a href="#" class="download-btn" onclick="window.print(); return false;">
+                <i class="fas fa-download"></i>Download as PDF
+            </a>
+
+            <!-- Professional Summary -->
+            <div class="cv-section">
+                <h2 class="section-title">Professional Summary</h2>
+                <p class="profile-text">
+                    Passionate and innovative Full Stack Developer with over 5 years of experience in creating robust web applications and digital solutions. Specialized in modern JavaScript frameworks, responsive design, and user-centered development. Proven track record of delivering high-quality projects that combine technical excellence with creative problem-solving. Committed to writing clean, efficient code and staying current with emerging technologies.
+                </p>
+            </div>
+
+            <!-- Skills -->
+            <div class="cv-section">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Frontend</h3>
+                        <span class="skill-item">HTML5</span>
+                        <span class="skill-item">CSS3</span>
+                        <span class="skill-item">JavaScript</span>
+                        <span class="skill-item">React</span>
+                        <span class="skill-item">Vue.js</span>
+                        <span class="skill-item">Three.js</span>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Backend</h3>
+                        <span class="skill-item">Node.js</span>
+                        <span class="skill-item">Express</span>
+                        <span class="skill-item">Python</span>
+                        <span class="skill-item">Django</span>
+                        <span class="skill-item">MongoDB</span>
+                        <span class="skill-item">PostgreSQL</span>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Tools & Others</h3>
+                        <span class="skill-item">Git</span>
+                        <span class="skill-item">Docker</span>
+                        <span class="skill-item">AWS</span>
+                        <span class="skill-item">UI/UX Design</span>
+                        <span class="skill-item">Figma</span>
+                        <span class="skill-item">REST APIs</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Work Experience -->
+            <div class="cv-section">
+                <h2 class="section-title">Work Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Senior Full Stack Developer</div>
+                            <div class="item-subtitle">Tech Solutions Inc.</div>
+                        </div>
+                        <div class="item-date">Jan 2021 - Present</div>
+                    </div>
+                    <div class="item-description">
+                        <ul>
+                            <li>Lead development of enterprise-level web applications serving 100K+ users</li>
+                            <li>Architected and implemented microservices infrastructure using Node.js and Docker</li>
+                            <li>Mentored junior developers and conducted code reviews to maintain code quality</li>
+                            <li>Improved application performance by 40% through optimization and refactoring</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Full Stack Developer</div>
+                            <div class="item-subtitle">Digital Innovations Ltd.</div>
+                        </div>
+                        <div class="item-date">Mar 2019 - Dec 2020</div>
+                    </div>
+                    <div class="item-description">
+                        <ul>
+                            <li>Developed and maintained multiple client projects using React and Node.js</li>
+                            <li>Implemented responsive designs and ensured cross-browser compatibility</li>
+                            <li>Collaborated with designers to create intuitive user interfaces</li>
+                            <li>Integrated third-party APIs and payment gateways</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Junior Web Developer</div>
+                            <div class="item-subtitle">Creative Web Agency</div>
+                        </div>
+                        <div class="item-date">Jun 2018 - Feb 2019</div>
+                    </div>
+                    <div class="item-description">
+                        <ul>
+                            <li>Built responsive websites using HTML, CSS, and JavaScript</li>
+                            <li>Assisted in database design and backend development</li>
+                            <li>Participated in agile development processes and daily stand-ups</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="cv-section">
+                <h2 class="section-title">Education</h2>
+                
+                <div class="education-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Bachelor of Science in Computer Science</div>
+                            <div class="item-subtitle">University of Lagos</div>
+                        </div>
+                        <div class="item-date">2014 - 2018</div>
+                    </div>
+                    <div class="item-description">
+                        <p>First Class Honours • GPA: 4.5/5.0</p>
+                        <p>Relevant coursework: Data Structures, Web Development, Database Systems, Software Engineering</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projects -->
+            <div class="cv-section">
+                <h2 class="section-title">Notable Projects</h2>
+                
+                <div class="experience-item">
+                    <div class="item-title">E-Commerce Platform</div>
+                    <div class="item-description">
+                        <p>Full-featured online store with payment integration, inventory management, and real-time analytics. Built with React, Node.js, and MongoDB.</p>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-title">Task Management Application</div>
+                    <div class="item-description">
+                        <p>Productivity application with team collaboration features, real-time updates, and project tracking. Technologies: Vue.js, Express, PostgreSQL.</p>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-title">Interactive 3D Portfolio</div>
+                    <div class="item-description">
+                        <p>Immersive portfolio website featuring 3D graphics and animations using Three.js and WebGL.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="cv-section">
+                <h2 class="section-title">Certifications</h2>
+                <div class="certifications">
+                    <div class="cert-item">
+                        <strong>AWS Certified Developer</strong>
+                        <div style="color: #7f8c8d; font-size: 0.9em;">Amazon Web Services - 2022</div>
+                    </div>
+                    <div class="cert-item">
+                        <strong>React Professional Certificate</strong>
+                        <div style="color: #7f8c8d; font-size: 0.9em;">Meta - 2021</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Languages -->
+            <div class="cv-section">
+                <h2 class="section-title">Languages</h2>
+                <div class="languages">
+                    <div class="language-item">
+                        <strong>English</strong> - Native/Fluent
+                    </div>
+                    <div class="language-item">
+                        <strong>Ijaw</strong> - Native
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
