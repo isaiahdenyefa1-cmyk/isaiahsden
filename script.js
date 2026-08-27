@@ -30,7 +30,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         if (!target) return;
 
         event.preventDefault();
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        target.scrollIntoView({ behavior: "smooth", block: "start" }); 
     });
 });
 
